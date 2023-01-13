@@ -1,15 +1,17 @@
 import './App.css'
-import { useAppSelector } from './hooks/Common'
+import { BrowserRouter , Routes , Route } from 'react-router-dom'
+import AddTask from './Views/AddTask.view'
+import CreateTask from './Views/CreateTask.view'
+
 
 function App() {
-
-  const tasks = useAppSelector(state => state.tasks)
-  console.log(tasks);
-
   return (
-    <div className="App">
-      <h1>Hello world</h1>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<AddTask />} />
+        <Route path='/create' element={<CreateTask />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 
