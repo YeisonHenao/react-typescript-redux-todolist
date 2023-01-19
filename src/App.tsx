@@ -10,6 +10,7 @@ function App() {
       <Routes>
         <Route path='/' element={<AddTask />} />
         <Route path='/create' element={<CreateTask />} />
+        <Route path='/edit-task/:id' element={<CreateTask />} />
       </Routes>
     </BrowserRouter>
   )
